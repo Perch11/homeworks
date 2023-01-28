@@ -15,7 +15,7 @@ public class homework_3 {
         System.out.println(s);
         System.out.println(w);
 
-        char t =9;
+        char t =57;
         System.out.println(t);
 
 
