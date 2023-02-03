@@ -1,5 +1,7 @@
 package methods;
 
+import java.util.Scanner;
+
 public class methods {
      static int  count = 0;
 
@@ -83,8 +85,14 @@ public class methods {
         s = method_4('d');
         System.out.println(s);
         System.out.println();
+        Scanner ss = new Scanner(System.in);
 
-        float d = method_5(8.0F,5.7F);
+        float e,r;
+        System.out.println("nermucel 2 float tver");
+        e = ss.nextFloat();
+        r = ss.nextFloat();
+
+        float d = method_5(r,e);
         System.out.println(d);
         System.out.println();
 
