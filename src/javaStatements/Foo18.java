@@ -9,7 +9,6 @@ public class Foo18 {
         if(x>=10000 && x<=99999){
             int sum = 0;
             while(x != 0){
-                //int sum = 0;
                 sum+=x % 10;
                 x = x / 10;
                 //System.out.println(sum);

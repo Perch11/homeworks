@@ -46,7 +46,7 @@ public class AdditionalTasks {
 //       System.out.println(y);
 
 
-        int x = 10, y = 5;
+        int x = 45, y = 56;
         x = x + y; // 15
         y = x - y; // 10
         x = x - y; // 5

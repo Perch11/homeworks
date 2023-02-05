@@ -7,7 +7,7 @@ public class Foo7 {
     void foo (double x,double y,double z){
         if(x>=y && x>=z){
             System.out.println("tveric mecaguyn@ = " + x);
-        }else if (y>x && y>=z){
+        }else if (y>=z){
             System.out.println("tveric mecaguyn@ = " + y);
         }else {
             System.out.println("tveric mecaguyn@ = " + z);
