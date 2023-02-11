@@ -38,9 +38,9 @@ public class Alg13 {
 
         for (int x = 3,i = 1; x < n; i++, x+=2) {
                 if(i % 2 == 0){
-                    sum -= a.pow(x)/a.factorial(x);
+                    sum -= (double) a.pow(x)/a.factorial(x);
                 }else {
-                    sum += a.pow(x)/a.factorial(x);
+                    sum += (double) a.pow(x)/a.factorial(x);
                 }
         }
 

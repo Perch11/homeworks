@@ -2,7 +2,7 @@ package homework_1;
 
 import java.util.Scanner;
                                                //Group(Integer)
-public class homework_1 {
+public class Homework_1 {
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);

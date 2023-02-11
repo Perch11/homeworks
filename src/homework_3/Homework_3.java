@@ -1,7 +1,7 @@
 package homework_3;
 
                                             //Group(Charcater)
-public class homework_3 {
+public class Homework_3 {
     public static void main(String[] args) {
 
 

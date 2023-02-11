@@ -12,12 +12,12 @@ public class Alg10 {
         }while(n < 0);
 
         double sum = 1;
-        for(double i = 2; i <= n; i++){
+        for(int i = 2; i <= n; i++){
 
             if(i % 2 == 0){
-                sum -= 1 / i;
+                sum -= 1.0 / i;
             }else{
-                sum += 1 / i;
+                sum += 1.0 / i;
             }
 
         }
