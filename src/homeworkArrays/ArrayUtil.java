@@ -181,6 +181,46 @@ public class ArrayUtil {
         System.out.println("count = " + count);
 
     }
+
+//    9  Դասավորել տրված թվերի հաջորդականության անդամները նվազման կարգով:
+
+    void sorting(){
+
+        int n;
+        do{
+            System.out.print("enter array length: ");
+            n = ss.nextInt();
+        }while (n<=2);
+
+        int[] x = new int[n], y = new int[n], z = new int[n];
+        System.out.print("input array elements ");
+        for (int i = 0; i < n; i++) {
+            x[i] = ss.nextInt();
+        }
+
+
+        boolean sort = false;
+
+
+        while(!sort){
+            sort = true;
+            for (int i = 0; i < x.length - 1; i++) {
+                if (x[i]<x[i +1]){
+
+                    sort = false;
+                    x[i] = x[i]^x[i + 1];
+                    x[i + 1] = x[i]^x[i +1];
+                    x[i] = x[i]^x[i + 1];
+
+                }
+            }
+        }
+        for (int i = 0; i < x.length; i++) {
+            System.out.print(x[i] + " ");
+        }
+    }
+
+
 //    13  Ներածել n բնական թիվը 2-ական տեսքով՝ ստանալով 0-ներից ու 1-երից կազմված .
 //    զանգված եւ արտածել n  թվի 10-ական ներկայացումը:
 //    Oրինակ՝    array = {1,1,0,0,1,1}
@@ -327,6 +367,7 @@ public class ArrayUtil {
         //arr.headDiagonalAbove();
         //arr.arrYesOrNO();
         //arr.convertArr(arr1);
+        //arr.sorting();
 
     }
 }
