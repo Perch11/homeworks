@@ -163,7 +163,7 @@ public class ArrayUtil {
             n = ss.nextInt();
         }while (n<=2);
 
-        int[] x = new int[n], y = new int[n], z = new int[n];
+        int[] x = new int[n];
         System.out.print("input array elements ");
         for (int i = 0; i < n; i++) {
             x[i] = ss.nextInt();
@@ -183,7 +183,6 @@ public class ArrayUtil {
     }
 
 //    9  Դասավորել տրված թվերի հաջորդականության անդամները նվազման կարգով:
-
     void sorting(){
 
         int n;
@@ -192,7 +191,7 @@ public class ArrayUtil {
             n = ss.nextInt();
         }while (n<=2);
 
-        int[] x = new int[n], y = new int[n], z = new int[n];
+        int[] x = new int[n];
         System.out.print("input array elements ");
         for (int i = 0; i < n; i++) {
             x[i] = ss.nextInt();
@@ -205,7 +204,8 @@ public class ArrayUtil {
         while(!sort){
             sort = true;
             for (int i = 0; i < x.length - 1; i++) {
-                if (x[i]<x[i +1]){
+                if (x[i]<x[i +1])
+                {
 
                     sort = false;
                     x[i] = x[i]^x[i + 1];
@@ -219,7 +219,45 @@ public class ArrayUtil {
             System.out.print(x[i] + " ");
         }
     }
+//    11  Տրված իրական թվերի հաջորդականությունից հեռացնել բոլոր զրոները։.
+//    Oրինակ՝  array = {1,0,6,4,9,0,0}
+//
+//    // {1,6,4,9}
 
+    void removeZeroesOne(){
+
+        int n;
+        do{
+            System.out.print("enter array length: ");
+            n = ss.nextInt();
+        }while (n<=2);
+
+        int[] x = new int[n];
+        System.out.print("input array elements ");
+        for (int i = 0; i < n; i++) {
+            x[i] = ss.nextInt();
+        }
+        int count = 0;
+        for (int i = 0; i < x.length; i++) {
+            if (x[i] != 0)
+                count++;
+        }
+        if(count == 0){
+
+            System.out.println("all elements are 0");
+            removeZeroesOne();}
+
+        int[] y = new int[count];
+
+        for (int i = 0, j = 0; i < x.length && j< y.length; i++) {
+            if(x[i] != 0){
+                y[j] = x[i];
+                j++;}
+        }
+        for (int i = 0; i < y.length; i++) {
+            System.out.print(y[i] + " ");
+        }
+    }
 
 //    13  Ներածել n բնական թիվը 2-ական տեսքով՝ ստանալով 0-ներից ու 1-երից կազմված .
 //    զանգված եւ արտածել n  թվի 10-ական ներկայացումը:
@@ -270,7 +308,6 @@ public class ArrayUtil {
 
 //    15  Շրջել տրված ամբողջ թվերի քառակուսային մատրիցը գլխավոր անկյունագծի .
 //    նկատմամբ:
-
      void swapMatrix(){
          int n;
          do{
@@ -350,24 +387,73 @@ public class ArrayUtil {
             System.out.println("no");
 
     }
+//    10.  Դասավորել տրված ամբողջ թվերի հաջորդականության անդամներն անյպես, որ .
+//    վերջում լինեն կենտերը:
+//    Oրինակ՝  array = {1,5,6,4,9,7,1}
+    // {6,4,1,5,9,7,1}
+    void oddElementsInLast(){
 
+        int n;
+        do{
+            System.out.print("enter array length: ");
+            n = ss.nextInt();
+        }while (n<=2);
+
+        int[] x = new int[n];
+        System.out.print("input array elements ");
+        for (int i = 0; i < n; i++) {
+            x[i] = ss.nextInt();
+        }
+
+        int len = 0;
+        int count = 0;
+
+        for(int j = 0; j < x.length; j++) {
+            for (int i = count; i < x.length - len; i++) {
+
+                if ((x[i] & 1) == 1 && (x[x.length - len - 1] & 1) == 1) {
+                    len++;
+                    break;
+                }
+                else if ((x[i] & 1) == 1 && (x[x.length - len - 1] & 1) != 1) {
+
+                    x[x.length - len - 1] = x[x.length - len - 1] ^ x[i];
+                    x[i] = x[x.length - len - 1] ^ x[i];
+                    x[x.length - len - 1] = x[x.length - len - 1] ^ x[i];
+                    len++;
+                    count++;
+
+                } else if (x[i] % 2 == 0) {
+                    count++;
+                    break;
+                }
+            }
+        }
+        for (int i = 0; i < x.length; i++) {
+            System.out.print(x[i] + " ");
+        }
+    }
 
     public static void main(String[] args) {
 
         ArrayUtil arr = new ArrayUtil();
+
         int[] arr1 =new int[]{1,0,1,0,1,1,1,0};
-        //arr.printPositivePoints();
-        //arr.arrayInverse();
-        //arr.arrayMaxValue();
-        //arr.arrayMinValue();
-        //arr.arrayCopy();
-        //arr.sumTwoArrays();
-        //arr.countK();
-        //arr.swapMatrix();
-        //arr.headDiagonalAbove();
-        //arr.arrYesOrNO();
-        //arr.convertArr(arr1);
-        //arr.sorting();
+
+        //arr.printPositivePoints(); //1
+        //arr.arrayInverse();        //2
+        //arr.arrayMaxValue();       //3
+        //arr.arrayMinValue();       //4
+        //arr.arrayCopy();           //5
+        //arr.sumTwoArrays();        //6
+        //arr.countK();              //7
+        //arr.swapMatrix();          //15
+        //arr.headDiagonalAbove();   //14
+        //arr.arrYesOrNO();          //16
+        //arr.convertArr(arr1);      //13
+        //arr.sorting();             //9
+        //arr.removeZeroesOne();     //11
+        //arr.oddElementsInLast();   //10
 
     }
 }
