@@ -2,7 +2,7 @@ package methods;
 
 import java.util.Scanner;
 
-public class methods {
+public class Methods {
      static int  count = 0;
 
     /**

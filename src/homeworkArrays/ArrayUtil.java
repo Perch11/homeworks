@@ -7,14 +7,17 @@ public class ArrayUtil {
 
     Scanner ss = new Scanner(System.in);
 
-    //1. Գրել method, որը տպում է int[] n  array-ի դրական տարրերը
+    /**
+     * This method has not input parameters,
+     * and prints positive elements in array.
+     */
     void printPositivePoints(){
-        //Scanner ss = new Scanner(System.in);
+
         int n;
         do{
             System.out.print("enter array length: ");
             n = ss.nextInt();
-        }while (n<=2);
+        }while (n <= 2);
 
         int[] x = new int[n];
 
@@ -23,21 +26,21 @@ public class ArrayUtil {
         }
         for (int i = 0; i < x.length; i++) {
 
-            if (x[i]>0) System.out.print(x[i]+" ");
-
+            if (x[i] > 0) System.out.print(x[i] + " ");
         }
     }
 
-// 2.   Գրել method, որը տպում է short[] s  array-ի էլեմենտները հակառակ
-//            հերթականությամբ
-//      Օրինակ՝ ( 257 -> 752).
+    /**
+     * This method has not input parameters,
+     * method iterates over and prints the given array.
+     */
     void arrayInverse(){
         //Scanner ss = new Scanner(System.in);
         int n;
         do{
             System.out.print("enter array length: ");
             n = ss.nextInt();
-        }while (n<=2);
+        }while (n <= 2);
 
         int[] x = new int[n];
 
@@ -50,14 +53,17 @@ public class ArrayUtil {
         }
     }
 
-   //3. Գրել method, որը գտնում եւ  տպում է  long[] l array-ի ամենամեծ տարրը.
+    /**
+     *  This method has not input parameters,
+     *  method finds the largest element of the array
+     */
     void arrayMaxValue(){
 
         int n;
         do{
             System.out.print("enter array length: ");
             n = ss.nextInt();
-        }while (n<=2);
+        }while (n <= 2);
 
         long[] x = new long[n];
 
@@ -73,7 +79,12 @@ public class ArrayUtil {
         }
         System.out.println("maxValue = " + maxValue);
     }
-//  4. Գրել method, որը գտնում եւ տպում է  float[] f  array-ի ամենափոքր տարրը.
+
+
+    /**
+     *  This method has not input parameters,
+     *  method finds the smallest element in an array
+     */
     void arrayMinValue(){
 
         int n;
@@ -98,14 +109,17 @@ public class ArrayUtil {
         System.out.println("minValue = " + minValue);
     }
 
-    // 5.Գրել method, որը int[] n array-ի էլեմենտները եւ տեղափոխում  int[] m  array-ի մեջ։
-    void arrayCopy(){
 
+    /**
+     * This method has not input parameters,
+     * method moves the elements of the given array into the second array
+     */
+    void arrayCopy(){
         int n;
         do{
             System.out.print("enter array length: ");
             n = ss.nextInt();
-        }while (n<=2);
+        }while (n <= 2);
 
         int[] x  = new int[n];
 
@@ -119,19 +133,17 @@ public class ArrayUtil {
             System.out.print(y[i] + " ");
         }
     }
-//    6. Գրել method, որը ստեղծում է երկու նույն չափը ունեցող array-ներ գումարում է
-//    array -ի համապատասխան էլեմենտները եւ գրում երրորդ array-ի մեջ։
-//    Oրինակ՝
-//    array1 = {1,5,6,4,7}
-//    array2 = {7,4,2,3,5}
-//    array3 = {8,9,8,7,12}
 
+    /**
+     * This method has not input parameters,
+     * method adds the corresponding elements of the two arrays and writes them to a third array
+     */
     void sumTwoArrays(){
         int n;
         do{
             System.out.print("enter array length: ");
             n = ss.nextInt();
-        }while (n<=2);
+        }while (n <= 2);
 
         int[] x = new int[n], y = new int[n], z = new int[n];
         System.out.println("input first array");
@@ -146,22 +158,21 @@ public class ArrayUtil {
         for (int i = 0; i < x.length; i++) {
 
             z[i] = x[i] + y[i];
-            System.out.println(z[i]);
+            System.out.println( z[i] );
         }
     }
 
-//    7. Գրել method, որը հաշվում է թե քանի անգամ է  k թիվը հանդիպել array-ի
-//    Էլեմենտների մեջ։
-//    Oրինակ՝ array = {1,5,6,4,5}
-//    k = 5;
-//    2
+    /**
+     * This method has not input parameters,
+     * method counts the number of times a given number occurs in a given array
+     */
     void countK(){
 
         int n;
         do{
             System.out.print("enter array length: ");
             n = ss.nextInt();
-        }while (n<=2);
+        }while (n <= 2);
 
         int[] x = new int[n];
         System.out.print("input array elements ");
@@ -170,62 +181,54 @@ public class ArrayUtil {
         }
         System.out.print("input k = ");
         int k = ss.nextInt();
-        int count=0;
+        int count = 0;
 
         for (int i = 0; i < x.length; i++) {
 
             if (x[i] == k)
                 count++;
-
         }
         System.out.println("count = " + count);
-
     }
 
-//    9  Դասավորել տրված թվերի հաջորդականության անդամները նվազման կարգով:
+    /**
+     * This method has not input parameters,
+     * method sorts the array elements in descending order
+     */
     void sorting(){
-
         int n;
         do{
             System.out.print("enter array length: ");
             n = ss.nextInt();
-        }while (n<=2);
+        }while (n <= 2);
 
         int[] x = new int[n];
         System.out.print("input array elements ");
         for (int i = 0; i < n; i++) {
             x[i] = ss.nextInt();
         }
-
-
         boolean sort = false;
-
-
         while(!sort){
             sort = true;
             for (int i = 0; i < x.length - 1; i++) {
                 if (x[i]<x[i +1])
                 {
-
                     sort = false;
-                    x[i] = x[i]^x[i + 1];
-                    x[i + 1] = x[i]^x[i +1];
-                    x[i] = x[i]^x[i + 1];
-
+                    x[i] = x[i] ^ x[i + 1];
+                    x[i + 1] = x[i] ^ x[i +1];
+                    x[i] = x[i] ^ x[i + 1];
                 }
             }
         }
-        for (int i = 0; i < x.length; i++) {
+        for (int i = 0; i < x.length; i++)
             System.out.print(x[i] + " ");
-        }
     }
-//    11  Տրված իրական թվերի հաջորդականությունից հեռացնել բոլոր զրոները։.
-//    Oրինակ՝  array = {1,0,6,4,9,0,0}
-//
-//    // {1,6,4,9}
 
+    /**
+     * This method has not input parameters,
+     * method removes all zeros from the array
+     */
     void removeZeroesOne(){
-
         int n;
         do{
             System.out.print("enter array length: ");
@@ -243,54 +246,50 @@ public class ArrayUtil {
                 count++;
         }
         if(count == 0){
-
             System.out.println("all elements are 0");
-            removeZeroesOne();}
-
+            removeZeroesOne();
+        }
         int[] y = new int[count];
-
         for (int i = 0, j = 0; i < x.length && j< y.length; i++) {
             if(x[i] != 0){
                 y[j] = x[i];
-                j++;}
+                j++;
+            }
         }
-        for (int i = 0; i < y.length; i++) {
-            System.out.print(y[i] + " ");
-        }
+        for (int i = 0; i < y.length; i++) System.out.print(y[i] + " ");
     }
 
-//    13  Ներածել n բնական թիվը 2-ական տեսքով՝ ստանալով 0-ներից ու 1-երից կազմված .
-//    զանգված եւ արտածել n  թվի 10-ական ներկայացումը:
-//    Oրինակ՝    array = {1,1,0,0,1,1}
-//    // 51
-
+    /**
+     * This method has a input parameter
+     * @param x =  int array[],
+     * method obtains the decimal code of the same number from the binary code
+     */
     void convertArr(int[] x){
 
         int sum = 0;
-        for (int i = x.length - 1; i>=0 ; i--) {
+        for (int i = x.length - 1; i >= 0 ; i--) {
 
             if (x[i] == 1)
-                sum+=Math.pow(2,i) ;
+                sum += Math.pow(2 , x.length -1 - i) ;
         }
-        System.out.println(sum);
-
+        System.out.println( sum );
     }
 
-
-
-    //   14  Տպել տրված մատրիցի գլխավորա անկյունագծից վերեւ բոլոր տարերը:
+    /**
+     * This method has not input parameters,
+     * method prints the elements above the main diagonal of the matrix
+     */
     void headDiagonalAbove(){
         int n;
         do{
             System.out.print("enter array length: ");
             n = ss.nextInt();
-        }while (n<=2);
+        }while (n <= 2);
         System.out.println("input matrix elements");
         int [][] x = new int[n][n];
         for (int i = 0; i < n; i++) {
 
             for (int j = 0; j < n; j++) {
-
                 x[i][j] = ss.nextInt();
             }
         }
@@ -302,12 +301,12 @@ public class ArrayUtil {
             }
             System.out.println();
         }
-
     }
 
-
-//    15  Շրջել տրված ամբողջ թվերի քառակուսային մատրիցը գլխավոր անկյունագծի .
-//    նկատմամբ:
+    /**
+     * This method has not input parameters,
+     * method flips the matrix elements with respect to the main diagonal
+     */
      void swapMatrix(){
          int n;
          do{
@@ -319,19 +318,14 @@ public class ArrayUtil {
          for (int i = 0; i < n; i++) {
 
              for (int j = 0; j < n; j++) {
-
                  x[i][j] = ss.nextInt();
              }
          }
-         for (int i = 0; i < x.length; i++) {
-
-             for (int j = 0; j < x[i].length ; j++) {
-
-                 if(i != j){
+         for (int i = 0; i < x.length - 1; i++) {
+             for (int j = i +1; j < x[i].length ; j++) {
                      x[i][j] = x[j][i]^x[i][j];
                      x[j][i] = x[j][i]^x[i][j];
                      x[i][j] = x[j][i]^x[i][j];
-                 }
              }
          }
          for (int i = 0; i < n; i++) {
@@ -341,15 +335,13 @@ public class ArrayUtil {
              System.out.println();
          }
      }
-//     16  Տրված բնական թվերի քառակուսային մատրիցի համար արտածել YES, եթե նրա .
-//    բոլոր տողերի տարրերի գումարը զույգ է։  NO հակառակ դեպքում։
-//    Oրինակ՝
-//    a = {1,-1,0,0}
-//    {2,-2,1,-1}        // YES
-//    {9,7,1,-17}
-//    a = {1,1,0,0}
-//    {2,-2,1,-1}        //NO
-//    {9,7,1,-17}
+
+    /**
+     * This method has input parameter - array,
+     * method calculates whether the sum of the elements of the given string is even or odd
+     * @param x int array[]
+     * @return true or false
+     */
     boolean sumElementsOddOrEven(int[] x){
         int sum = 0;
         for (int i = 0; i < x.length; i++) {
@@ -359,6 +351,12 @@ public class ArrayUtil {
         }
         else return false;
     }
+
+    /**
+     * This method has not input parameters,
+     * method calculates the sum of the elements of all rows of the given matrix, whether odd or even
+     * and last prints yes or no
+     */
     void arrYesOrNO(){
         int n;
         do{
@@ -368,15 +366,12 @@ public class ArrayUtil {
         System.out.println("input matrix elements");
         int [][] x = new int[n][n];
         for (int i = 0; i < n; i++) {
-
             for (int j = 0; j < n; j++) {
-
                 x[i][j] = ss.nextInt();
             }
         }
         int count = 0;
         for (int i = 0; i < x.length; i++) {
-
             if(sumElementsOddOrEven(x[i])){
              count++;
             }
@@ -385,14 +380,13 @@ public class ArrayUtil {
             System.out.println("yes");
         else
             System.out.println("no");
-
     }
-//    10.  Դասավորել տրված ամբողջ թվերի հաջորդականության անդամներն անյպես, որ .
-//    վերջում լինեն կենտերը:
-//    Oրինակ՝  array = {1,5,6,4,9,7,1}
-    // {6,4,1,5,9,7,1}
-    void oddElementsInLast(){
 
+    /**
+     * This method has not input parameters,
+     * method sorts the elements of the array so that the odd ones are at the end
+     */
+    void oddElementsInLast(){
         int n;
         do{
             System.out.print("enter array length: ");
@@ -404,25 +398,20 @@ public class ArrayUtil {
         for (int i = 0; i < n; i++) {
             x[i] = ss.nextInt();
         }
-
         int len = 0;
         int count = 0;
-
         for(int j = 0; j < x.length; j++) {
             for (int i = count; i < x.length - len; i++) {
-
                 if ((x[i] & 1) == 1 && (x[x.length - len - 1] & 1) == 1) {
                     len++;
                     break;
                 }
                 else if ((x[i] & 1) == 1 && (x[x.length - len - 1] & 1) != 1) {
-
                     x[x.length - len - 1] = x[x.length - len - 1] ^ x[i];
                     x[i] = x[x.length - len - 1] ^ x[i];
                     x[x.length - len - 1] = x[x.length - len - 1] ^ x[i];
                     len++;
                     count++;
-
                 } else if (x[i] % 2 == 0) {
                     count++;
                     break;
@@ -438,7 +427,7 @@ public class ArrayUtil {
 
         ArrayUtil arr = new ArrayUtil();
 
-        int[] arr1 =new int[]{1,0,1,0,1,1,1,0};
+        int[] arr1 =new int[]{1,1,1,1,0};
 
         //arr.printPositivePoints(); //1
         //arr.arrayInverse();        //2
