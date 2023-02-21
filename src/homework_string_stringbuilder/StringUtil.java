@@ -1,6 +1,9 @@
-package homeworkString_StringBuilder;
+package homework_string_stringbuilder;
 
 import java.util.Scanner;
+
+import static sun.util.locale.LocaleUtils.isEmpty;
+
 public class StringUtil {
     Scanner ss = new Scanner(System.in);
 
@@ -19,7 +22,6 @@ public class StringUtil {
         System.out.println(a + b + str1);
         System.out.println(str3 + b + str1);
         System.out.println(str1 + a + b + str2);
-
     }
 
     /** method 1*
@@ -74,6 +76,41 @@ public class StringUtil {
             }
             else System.out.print(ch);
         }
+    }
+
+    /**
+     *
+     * @param token - type string
+     * @param str - type string
+     * @return type int count
+     */
+    int countToken(String token, String str){
+        if(isEmpty(str) || isEmpty(token)) {
+            System.out.println("empty string or token");
+            return 0;
+        }
+        if(token.length() > str.length()){
+            System.out.println("token is longer than string");
+            return -1;
+        }
+        int M = token.length();
+        int N = str.length();
+        int count = 0;
+
+        for (int i = 0; i <= N - M; i++) {
+
+            int j;
+            for (j = 0; j < M; j++) {
+                if (str.charAt(i + j) != token.charAt(j)) {
+                    break;
+                }
+            }
+            if (j == M) {
+                count++;
+                j = 0;
+            }
+        }
+        return count;
     }
 
     /**method 5
@@ -150,7 +187,7 @@ public class StringUtil {
      * This method removes the given symbol
      * @param str - type string
      */
-    void removetwo(String str){
+    void remove2(String str){
 
         str = str.replace("a","*");
         System.out.println(str);
@@ -181,6 +218,7 @@ public class StringUtil {
 
     public static void main(String[] args) {
         StringUtil string = new StringUtil();
+
         string.stringConcat();
         string.StringBuilderConcat();
 
@@ -194,15 +232,16 @@ public class StringUtil {
 
         string.stringArmenia();
 
-        System.out.println(string.stringIndex("shoininancao","c"));
+        System.out.println(string.stringIndex("","c"));
 
         string.nullOrEmpty(null);
 
-        string.remove("We are living in an yellow submarine. We don't  have anything");
 
-        string.removetwo("We are living in an yellow submarine. We don't  have anything");
+        string.remove("We are living in a yellow submarine. We don't  have anything");
+
+        string.remove2("We are living in a yellow submarine. We don't  have anything");
 
         string.subString("",6);
-        string.subString2(new StringBuilder("sdfnsdoidfsdjf dsf"),12);
+        string.subString2(new StringBuilder("hello world"),6);
     }
 }

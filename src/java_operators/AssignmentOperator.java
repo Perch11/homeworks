@@ -1,4 +1,4 @@
-package javaOperators;
+package java_operators;
 
 public class AssignmentOperator {
     public static void main(String[] args) {

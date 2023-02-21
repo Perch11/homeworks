@@ -1,4 +1,4 @@
-package javaOperators;
+package java_operators;
 
 public class AdditionalTasks {
       int count = 0;

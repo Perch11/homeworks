@@ -1,4 +1,4 @@
-package javaOperators;
+package java_operators;
 
 public class ArithmeticOperators {
     void aritOper(int a,int b){

@@ -1,4 +1,4 @@
-package javaStatements;
+package java_statements;
 
 public class Foo2 {
 

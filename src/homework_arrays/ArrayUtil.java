@@ -1,6 +1,5 @@
-package homeworkArrays;
+package homework_arrays;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayUtil {

@@ -1,4 +1,4 @@
-package javaOperators;
+package java_operators;
 
 public class UnaryOperators {
     void unOperator(int e, int f, boolean n1){
