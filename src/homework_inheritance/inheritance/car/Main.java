@@ -20,7 +20,9 @@ class Car{
     }
 
     public void setEngineType(char engineType) {
+        if(Character.isLetter(engineType)){
         this.engineType = engineType;
+        }
     }
 
     public Car(int passengerCount, char engineType) {
