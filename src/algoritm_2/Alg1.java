@@ -8,14 +8,12 @@ public class Alg1 {
         Scanner ss = new Scanner(System.in);
         System.out.print("Enter the positive number: ");
         int n = ss.nextInt();
-        if(n<=0){
+        if (n <= 0) {
 
             System.out.println("please enter the positive number");
-        }
-        else
-        {
-            for(int i = 1; i<=10;i++){
-                System.out.println(n + " * " + i + " = "  + n * i );
+        } else {
+            for (int i = 1; i <= 10; i++) {
+                System.out.println(n + " * " + i + " = " + n * i);
             }
         }
 

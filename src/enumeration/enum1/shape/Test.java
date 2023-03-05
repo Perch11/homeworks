@@ -1,4 +1,4 @@
-package enumeration.shape;
+package enumeration.enum1.shape;
 
 public class Test {
     public static void main(String[] args) {

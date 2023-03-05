@@ -18,7 +18,7 @@ public class Alg7 {
             if (n > large) {
                 large = n;
             }
-            if (n<small){
+            if (n < small) {
                 small = n;
             }
 

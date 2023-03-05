@@ -3,16 +3,14 @@ package algoritms_1;
 import java.util.Random;
 
 public class Alg3 {
-    void evenOrOdd(){
+    void evenOrOdd() {
 
-        int n =  (int) (Math.random() * 100);
+        int n = (int) (Math.random() * 100);
         System.out.print(n + "-");
-        if(n % 2 == 0){
+        if (n % 2 == 0) {
             System.out.println("number is even");
 
-        }
-        else
-        {
+        } else {
             System.out.println("number is odd");
         }
     }
@@ -20,8 +18,7 @@ public class Alg3 {
     public static void main(String[] args) {
         Alg3 a = new Alg3();
 
-        for(int i=1;i<=100;i++)
-        {
+        for (int i = 1; i <= 100; i++) {
 
             a.evenOrOdd();
         }

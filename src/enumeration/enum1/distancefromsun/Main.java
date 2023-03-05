@@ -1,4 +1,4 @@
-package enumeration.distancefromsun;
+package enumeration.enum1.distancefromsun;
 
 public class Main {
     public static void main(String[] args) {

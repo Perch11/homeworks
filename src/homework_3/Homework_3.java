@@ -1,6 +1,6 @@
 package homework_3;
 
-                                            //Group(Charcater)
+//Group(Charcater)
 public class Homework_3 {
     public static void main(String[] args) {
 
@@ -15,7 +15,7 @@ public class Homework_3 {
         System.out.println(s);
         System.out.println(w);
 
-        char t =57;
+        char t = 57;
         System.out.println(t);
 
 

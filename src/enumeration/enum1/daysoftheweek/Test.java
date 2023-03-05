@@ -1,4 +1,4 @@
-package enumeration.daysoftheweek;
+package enumeration.enum1.daysoftheweek;
 
 public class Test {
     public static void main(String[] args) {

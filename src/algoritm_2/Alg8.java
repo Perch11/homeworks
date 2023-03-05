@@ -15,12 +15,10 @@ public class Alg8 {
                 n = n / 10;
 
             }
-            if (sum == i){
-                System.out.println(sum +" is armstrong number");
+            if (sum == i) {
+                System.out.println(sum + " is armstrong number");
             }
-//            else{
-//              //  System.out.println(sum + "is not armstrong number ");
-//            }
+
         }
     }
 }

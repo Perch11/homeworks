@@ -18,7 +18,5 @@ public class Main {
         System.out.println(mult(n));
         System.out.println("--------------------");
         System.out.println("--------------------");
-
-
     }
 }

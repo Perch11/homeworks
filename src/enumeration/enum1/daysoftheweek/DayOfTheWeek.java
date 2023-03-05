@@ -1,4 +1,4 @@
-package enumeration.daysoftheweek;
+package enumeration.enum1.daysoftheweek;
 
 public enum DayOfTheWeek {
     MONDAY(1),
@@ -11,14 +11,27 @@ public enum DayOfTheWeek {
 
     private final int dayNumber;
 
+    /**
+     * constructor
+     * @param dayNumber int type
+     */
     DayOfTheWeek(int dayNumber) {
         this.dayNumber = dayNumber;
     }
 
+    /**
+     * getter dayNumber
+     * @return int type
+     */
     public int getDayNumber() {
         return dayNumber;
     }
 
+    /**
+     * this static method get us dey number in enum
+     * @param day type of enum
+     * @return int type
+     */
     public static int getDayNumber(DayOfTheWeek day) {
         return day.getDayNumber();
     }

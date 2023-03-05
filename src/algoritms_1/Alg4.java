@@ -10,16 +10,14 @@ public class Alg4 {
             int n = rand.nextInt(100);
 
             System.out.print(n + " ");
-            if(i == 10){
+            if (i == 10) {
                 System.out.println("");
             }
-            while (n>large)
-            {
+            while (n > large) {
                 large = n;
             }
-            while (n < small)
-            {
-               small = n;
+            while (n < small) {
+                small = n;
             }
 
         }

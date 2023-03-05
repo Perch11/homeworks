@@ -1,8 +1,9 @@
 package homework_5;
+
 // Java Type Casting
 public class Homework_5 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         int aa = 7;
         long bb;

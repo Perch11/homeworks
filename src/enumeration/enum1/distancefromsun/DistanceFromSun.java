@@ -1,4 +1,4 @@
-package enumeration.distancefromsun;
+package enumeration.enum1.distancefromsun;
 
 public enum DistanceFromSun {
     MERCURY(0.39),
@@ -12,10 +12,18 @@ public enum DistanceFromSun {
 
     private final double distanceFromSun;
 
+    /**
+     * constructor
+     * @param distanceFromSun double type
+     */
     DistanceFromSun(double distanceFromSun) {
         this.distanceFromSun = distanceFromSun;
     }
 
+    /**
+     * getter DistanceFromSun
+     * @return double type
+     */
     public double getDistanceFromSun() {
         return distanceFromSun;
     }

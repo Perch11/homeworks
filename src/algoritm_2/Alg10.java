@@ -6,17 +6,17 @@ public class Alg10 {
     public static void main(String[] args) {
         Scanner ss = new Scanner(System.in);
         int n;
-        do{
+        do {
             System.out.print("enter the number:");
             n = ss.nextInt();
-        }while(n < 0);
+        } while (n < 0);
 
         double sum = 1;
-        for(int i = 2; i <= n; i++){
+        for (int i = 2; i <= n; i++) {
 
-            if(i % 2 == 0){
+            if (i % 2 == 0) {
                 sum -= 1.0 / i;
-            }else{
+            } else {
                 sum += 1.0 / i;
             }
 

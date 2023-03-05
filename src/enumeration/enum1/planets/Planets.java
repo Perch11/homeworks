@@ -1,4 +1,4 @@
-package enumeration.planets;
+package enumeration.enum1.planets;
 
 public enum Planets {
     MERCURY("Mercury",88),

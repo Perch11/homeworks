@@ -10,35 +10,26 @@ public class Alg4 {
         int n = ss.nextInt();
         if (n <= 0) {
             System.out.println("please enter positive number");
-        }
-        else
-        {
+        } else {
             int m = 2, number = 0;
 
-            if (n <= 3)
-            {
+            if (n <= 3) {
                 System.out.println(n + " is prime number");
-            }
-            else
-            {
+            } else {
 
-                                while (number == 0)
-                                {
-                                    if (n % m == 0)
-                                    {
-                                            if(n == m){
-                                                System.out.println(n + " is prime number");
-                                                number = 1;
-                                            }
-                                            else {
-                                                    System.out.println(n + "is not a prime number");
-                                                    number = 1;
-                                            }
-                                    }
-                                    else {
-                                        m = m + 1;
-                                    }
-                                }
+                while (number == 0) {
+                    if (n % m == 0) {
+                        if (n == m) {
+                            System.out.println(n + " is prime number");
+                            number = 1;
+                        } else {
+                            System.out.println(n + "is not a prime number");
+                            number = 1;
+                        }
+                    } else {
+                        m = m + 1;
+                    }
+                }
             }
         }
     }

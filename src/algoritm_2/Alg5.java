@@ -6,8 +6,9 @@ public class Alg5 {
     public static void main(String[] args) {
         Scanner ss = new Scanner(System.in);
         int num1, num2;
-        String str; ;
-        do{
+        String str;
+        ;
+        do {
             System.out.println("enter two numbers");
             num1 = ss.nextInt();
 

@@ -1,11 +1,11 @@
 package homework_4;
 
-                                             //Group(Boolean)
+//Group(Boolean)
 public class Homework_4 {
 
     public static void main(String[] args) {
 
-        boolean p = true,q = false;
+        boolean p = true, q = false;
         System.out.println(p);
         System.out.println(q);
 

@@ -16,14 +16,13 @@ public class Alg9 {
                 System.out.println("0");
                 break;
             }
-           // double sum = 1.0;
+
             for (double i = 1; i <= n; i++) {
                 sum = sum + (1 / i);
                 System.out.println(1 / i);
             }
             System.out.println("sum = " + sum);
             break;
-           // System.out.println("sum = " + sum);
         }
 
     }
