@@ -17,8 +17,9 @@ public enum SolarSystem {
 
     /**
      * enam constructor
-     * @param name string type
-     * @param mass double type - in kilograms
+     *
+     * @param name     string type
+     * @param mass     double type - in kilograms
      * @param distance double type - in kilometers
      */
     SolarSystem(String name, double mass, double distance) {
@@ -29,6 +30,7 @@ public enum SolarSystem {
 
     /**
      * getter
+     *
      * @return string type - name
      */
     public String getName() {
@@ -37,6 +39,7 @@ public enum SolarSystem {
 
     /**
      * getter
+     *
      * @return double type - massive
      */
     public double getMass() {
@@ -45,6 +48,7 @@ public enum SolarSystem {
 
     /**
      * getter
+     *
      * @return double type - distance
      */
     public double getDistance() {

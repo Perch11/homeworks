@@ -1,28 +1,29 @@
 package enumeration.enum2.seasons;
 
 public enum Seasons {
-    SPRING(5,22),
-    SUMMER(19,45),
-    AUTUMN(9,18),
-    WINTER(-40,8);
-
+    SPRING(5, 22),
+    SUMMER(19, 45),
+    AUTUMN(9, 18),
+    WINTER(-40, 8);
 
 
     public double minTemp;
-    private  double maxTemp;
+    private double maxTemp;
 
     /**
      * constructor
+     *
      * @param minTemp - type double
      * @param maxTemp - type double
      */
-    Seasons(double minTemp,double maxTemp){
+    Seasons(double minTemp, double maxTemp) {
         this.minTemp = minTemp;
         this.maxTemp = maxTemp;
     }
 
     /**
      * getter
+     *
      * @return minimum temperature - type double
      */
     public double getMinTemp() {
@@ -31,6 +32,7 @@ public enum Seasons {
 
     /**
      * setter
+     *
      * @param minTemp - type double
      */
     public void setMinTemp(double minTemp) {
@@ -39,6 +41,7 @@ public enum Seasons {
 
     /**
      * getter
+     *
      * @return maximum temperature - type double
      */
     public double getMaxTemp() {
@@ -47,6 +50,7 @@ public enum Seasons {
 
     /**
      * setter
+     *
      * @param maxTemp - type double
      */
     public void setMaxTemp(double maxTemp) {
@@ -55,6 +59,7 @@ public enum Seasons {
 
     /**
      * this method shows whether a given temperature is within the given weather temperature range
+     *
      * @param temperature - type double
      * @return type boolean
      */

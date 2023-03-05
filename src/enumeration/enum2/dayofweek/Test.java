@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Test {
     /**
      * this method checks what day of the week is entered
+     *
      * @param day enum type - DayOfWeek
      */
     public static void workingDay(DayOfWeek day) {

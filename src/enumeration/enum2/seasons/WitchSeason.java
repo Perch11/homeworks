@@ -3,9 +3,10 @@ package enumeration.enum2.seasons;
 public class WitchSeason {
     /**
      * this method shows which weather the given temperature corresponds to
+     *
      * @param temp double type
      */
-    public void witchSeason(double temp){
+    public void witchSeason(double temp) {
 
         Seasons season = null;
         for (Seasons s : Seasons.values()) {
