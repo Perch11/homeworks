@@ -10,19 +10,6 @@ public class TestTraffic {
     }
 
 }
-
-abstract class State {
-
-    protected TrafficLight trafficLight;
-
-    public State(TrafficLight trafficLight) {
-        this.trafficLight = trafficLight;
-    }
-
-    public abstract void changeState();
-
-}
-
 enum TrafficLightState {
 
     RED {
@@ -44,29 +31,51 @@ enum TrafficLightState {
         public TrafficLightState getNextState() {
             return RED;
         }
+
     };
 
     public abstract TrafficLightState getNextState();
 
-}
 
+
+}
 class TrafficLight {
 
-    private TrafficLightState state;
+    public TrafficLightState state;
 
     public TrafficLight() {
         state = TrafficLightState.RED;
     }
 
+    /**
+     * this method starts traffic test
+     */
     public void start() {
+        int count = 0;
         while (true) {
             System.out.println(state.name());
-            try {
-                TimeUnit.SECONDS.sleep(3);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            if (state.ordinal() == 1) {
+                try {
+                    TimeUnit.SECONDS.sleep(3);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                state = state.getNextState();
+            }else if(state.ordinal() == 2){
+                try {
+                    TimeUnit.SECONDS.sleep(15);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                state = state.getNextState();
+            }else{
+                try {
+                    TimeUnit.SECONDS.sleep(15);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                state = state.getNextState();
             }
-            state = state.getNextState();
         }
     }
 
